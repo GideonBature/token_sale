@@ -59,7 +59,7 @@ mod TokenSale {
             assert(caller.is_non_zero(), Errors::ZERO_ADDRESS_CALLER);
             assert(caller == owner, Errors::NOT_OWNER);
 
-            self.erc20.mint(caller, amount);
+            self.erc20.mint(owner, amount);
         }
     }
 }
